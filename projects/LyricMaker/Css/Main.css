@@ -1,0 +1,225 @@
+@import "/Css/Main.css";
+
+.lyrics-container {
+  display: flex;
+  color: var(--morning);
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-end;
+}
+
+.lyrics-container>div {
+  margin: 0 5px;
+}
+
+.lyrics-container *div {
+  position: relative;
+}
+
+.lyrics-container .controls {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 5px 0;
+}
+
+.controls button, .controls a{
+  border-radius: 9999px;
+  outline: none;
+  background: var(--morning);
+  color: var(--land);
+  border: 2px outset var(--morning);
+  font-weight: bold;
+  font-size: 16px;
+  min-width: 75px;
+  text-align: center;
+  padding: 2px 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  text-decoration: none;
+  position: relative;
+}
+
+.controls button:active, .controls a:not([disabled=true]):active{
+  border-style: inset;
+}
+
+.controls button:disabled{
+  color: gray;
+  border-style: inset;
+}
+/*
+.controls a:not([disabled=true])::before,
+.controls a:not([disabled=true])::after {
+  content: "";
+  width: 25px;
+  height: 25px;
+  border: 2px dotted var(--morning);
+  position: absolute;
+  top: calc(50% - 12.5px);
+  z-index: -1;
+  animation: rotate 3s infinite linear;
+  box-sizing: border-box;
+  transition: 1s;
+  transform: scale(1);
+  border-radius: 9999px;
+}
+
+.controls a:not([disabled=true])::before {
+  left: -4px;
+}
+
+.controls a:not([disabled=true])::after {
+  right: -4px;
+  animation-direction: reverse;
+}
+*/
+.controls a {
+  background: none;
+  border-color: transparent;
+  position: relative;
+  color: var(--land);
+
+}
+.controls a:not([disabled=true]){
+  border: 2px outset var(--morning);
+  transition: 1s;
+  transition-delay: 0.5s;
+  background: var(--morning);
+}
+.controls a progress{
+  z-index: -1;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+.lyrics-container .lyrics-file {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2px 0;
+}
+
+.lyrics-file>* {
+  width: 100%;
+}
+
+.lyrics-container textarea,
+.lyrics-progress {
+  width: 400px !important;
+  height: 200px !important;
+  max-width: 95vw !important;
+  color: var(--morning);
+  box-sizing: border-box;
+  outline: none;
+  overflow: auto;
+  font-size: 12px;
+  background: transparent;
+  border: 1px dotted var(--morning);
+}
+.lyrics-progress > .last{
+  opacity: 0.5;
+}
+.lyrics-container textarea{
+  text-align: center;
+  display: flex;
+}
+.lyrics-container textarea::placeholder{
+  color: palegoldenrod;
+}
+
+.lyrics-container>div {
+  display: flex;
+  flex-direction: column;
+}
+
+.lyrics-file input[type=file] {
+  position: relative;
+  overflow: hidden;
+  margin: 5px;
+}
+/*
+.lyrics-file input[type=file]::after {
+  content: attr(filename);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--land);
+  color: var(--morning);
+  font-weight: bold;
+  text-align: center;
+  line-height: 175%;
+  
+}*/
+.lyrics-file input[type=file]::-webkit-file-upload-button{
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  border: 2px outset var(--morning);
+  border-radius: 9999px;
+  color: var(--land);
+  background: var(--morning);
+  font-weight: bold;
+  padding: 2px 5px;
+  box-sizing: border-box;
+}
+progress{
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  -webkit-appearance: none;
+  appearance: none;
+  -moz-appearance: none;
+  
+  overflow: hidden;
+  color: var(--land);
+  border-radius: 9999px;
+  transition: 1s;
+}
+progress::-webkit-progress-bar{
+  background: var(--land);
+  transition: 1s;
+}
+progress::-webkit-progress-value{
+  background: var(--morning);
+  transition: 1s;
+  border-radius: 9999px;
+}
+
+/*
+    <div class="lyrics-container">
+      <div>
+        <div class="lyrics-progress">
+          
+        </div>
+        <div>
+          <input type="file">
+          <progress value="245" max="764"></progress>
+        </div>
+        <div class="controls">
+          <button>Play/Pause</button>
+          <button>Record!</button>
+          <button>Undo</button>
+        </div>
+      </div>
+      <div>
+        <textarea placeholder="Put the lyrics here..."></textarea>
+        <div class="controls">
+          <button>
+            Click to Download
+          </button>
+        </div>
+      </div>
+    </div>
+    */

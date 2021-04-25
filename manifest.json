@@ -1,0 +1,35 @@
+{
+  "short_name": "TredesReiniel",
+  "name": "Reiniel Tredes",
+  "theme_color": "#47597D",
+  "background_color": "#47597D",
+  "display": "standalone",
+  "icons": [
+    {
+      "src": "/Images/Scenery512.png",
+      "type": "image/png",
+      "sizes": "48x48"
+    },
+    {
+      "src": "/Images/Scenery512.png",
+      "type": "image/png",
+      "sizes": "96x96"
+    },
+    {
+      "src": "/Images/Scenery512.png",
+      "type": "image/png",
+      "sizes": "144x144"
+    },
+    {
+      "src": "/Images/Scenery512.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "/Images/Scenery512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": "/"
+}

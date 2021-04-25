@@ -1,0 +1,55 @@
+{
+  "array": [
+    {
+      "image": "/Images/Portfolio.jpg",
+      "title": "My Portfolio",
+      "info": "My former instructor said that i should make this portfolio so that i can attract more clients, honestly it took me so long doing this, specially because i dont have a laptop, barely had an internet connection, and I am a factory worker last time, but not anymore. I've made this only using my mobile phone using Spck Editor, when i needed to deploy this website i just borrow a laptop from my father. I have made this portfolio because of the kind words from my former instructor. She believed that I better be a programmer/web dev and I should make this first to start my journey.",
+      "links": [
+        {
+          "title": "Visit",
+          "icon": "fas fa-link",
+          "href": "/"
+        },
+        {
+          "title": "Source",
+          "icon": "fab fa-github",
+          "href": "https://github.com/rtredes/Portfolio"
+        }
+      ]
+    },
+    {
+      "image": "/Images/Scenery.jpg",
+      "title": "Scenery",
+      "info": "I love JavaScript alot, so i studied the JavaScript Canvas and played with it untill now. I want to be different, and I make website that is different, that's why I studied the depths of Css and Js. I made this just for my portfolio header, the sun and moon is synced with device time, and is animating real time (Try watching the header till night), the background and the pixel arts is all made by me (on android phone Using Pixly). No matter how long your device is, it supports infinite width. to infinity and beyond!",
+      "links": [
+        {
+          "title": "Visit",
+          "icon": "fas fa-link",
+          "href": "/projects/Scenery"
+            },
+        {
+          "title": "Source",
+          "icon": "fab fa-github",
+          "href": "https://github.com/rtredes/Portfolio/tree/master/projects/Scenery"
+        }
+      ]
+    },
+    {
+      "image": "/Images/Lyrics.jpg",
+      "title": "Lyric Maker",
+      "info": "The lyric maker i have made for myself. I have a music player that supports a lyric file. but the problem is, it's hard to find .lrc file on google. so i come up with an idea, I should make a lyric maker. this lyric maker is simple and easy to use. I don't think i need to explain that.",
+      "links": [
+        {
+          "title": "Visit",
+          "icon": "fas fa-link",
+          "href": "/projects/LyricMaker"
+                    },
+        {
+          "title": "Source",
+          "icon": "fab fa-github",
+          "href": "https://github.com/rtredes/Portfolio/tree/master/projects/LyricMaker"
+        }
+      ]
+    }
+  ]
+}

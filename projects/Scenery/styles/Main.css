@@ -1,0 +1,14 @@
+html{
+    --morning: #FFFDD5;
+    --land: #47597D;
+  background: var(--land);
+}
+
+body{
+  margin: 0;
+}
+
+.Scenery{
+  height: 275px;
+  width: 100%;
+}

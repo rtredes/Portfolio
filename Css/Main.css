@@ -358,7 +358,12 @@ hr.top {
   max-width: 300px;
   margin: 10px 2rem;
   align-self: center;
-  box-shadow: 2px 2px 5px black;
+  
+  border: 2px outset var(--morning);
+  color: var(--land);
+  background: var(--morning);
+  border-radius: 5px;
+  padding: .5rem;
 }
 .myworks .container .description {
   display: flex;
@@ -375,6 +380,15 @@ hr.top {
   margin: 1rem;
   text-transform: initial;
   transition: 0.3s;
+  /*
+  border: 2px outset var(--morning);
+  color: var(--land);
+  background: var(--morning);
+  border-radius: 5px;
+  padding: .5rem;
+  
+  */
+  font-size: .8rem;
 }
 .myworks .container .description .buttons {
   display: flex;

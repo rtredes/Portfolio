@@ -37,7 +37,7 @@
     {
       "image": "/Images/Lyrics.jpg",
       "title": "Lyric Maker",
-      "info": "The lyric maker i have made for myself. I have a music player that supports a lyric file. but the problem is, it's hard to find .lrc file on google. so i come up with an idea, I should make a lyric maker. this lyric maker is simple and easy to use. I don't think i need to explain that.",
+      "info": "A lyric maker for music players that uses .lrc files. this simple and easy to use lyric maker is useful when making .lrc files. 5 buttons to create one file (Upload, start, record, undo, and download). made with Html, Css, and Js",
       "links": [
         {
           "title": "Visit",

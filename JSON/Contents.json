@@ -1,0 +1,54 @@
+{
+  "about": [
+      [
+        "My name is ",
+        "${str('Reiniel', 'Tredes')}, ",
+        "a ${calculateAge('10/01/98')} years old self-taught ",
+        "${str('web', 'full-stack')} developer, ",
+        "from ${str('Philippines','Dasmariñas, Cavite')}"
+      ],
+      [
+        "I am a 2nd year undergraduate student of ",
+        "<b><i>“Bachelor of Science in Information Technology”.</i></b> ",
+        "I am not able to finish my studies because of financial problem, but that's kind of okay, because the last semester on my school is when I learnt the basics of ",
+        "<b>HTML</b>, <b>CSS</b>, and <b>JS</b>"
+      ],
+      [
+      "For some reason I am only using pure ",
+      "<b>HTML</b>, <b>CSS</b>, and <b>JS</b>. ",
+      "I am avoiding the use of things that makes it easier like ",
+      "<b>Bootstrap</b>, <b>jQuery</b>, etc. ",
+      "I think easy and comfortable things will stop me from ${str('growing','learning')}"
+      ],
+      [
+      "I am <b>hardworking</b>, <b>passionate</b>, <b>fast learner</b>, and <b>honest</b>. ",
+      "I am always willing to learn new things to expand my knowledge, and to achieve my dream of becoming a successful ${str('developer','person')} someday."
+      ]
+  ],
+  "stacks": "HTML5 - CSS3 - JS - ES6 - NODEJS - FIREBASE - PHP - MYSQL",
+  "contact": {
+    "email": "rtredes2@gmail.com",
+    "links": [
+      {
+        "icon": "facebook",
+        "href": "facebook.com/rtredes"
+          },
+      {
+        "icon": "twitter",
+        "href": "twitter.com/rtredes"
+          },
+      {
+        "icon": "instagram",
+        "href": "instagram.com/reiniel26"
+          },
+      {
+        "icon": "github",
+        "href": "github.com/rtredes"
+      },
+      {
+        "icon": "steam",
+        "href": "steamcommunity.com/id/rtredes"
+      }
+    ]
+  }
+}

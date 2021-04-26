@@ -84,7 +84,7 @@ export default class {
     })
 
     this.lyric_input = create.element("textarea", {
-      'placeholder': "Input the lyrics here...",
+      'placeholder': "Paste or Type the lyrics here",
       'append': div2,
       'required': 'true',
       'event': {

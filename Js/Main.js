@@ -142,9 +142,14 @@ function setHide(el) {
     el.setAttribute("hide", "true")
 }
 
+function getJSON(href){
+  return fetch(href).then(value => value.json())
+}
+
 async function createVault() {
   const portfolio = new Containers.Portfolio(
-    document.querySelector('.body')
+    document.querySelector('.body'), 
+    await getJSON('/JSON/Contents.json')
   )
 
   var withScrollEvents = [
@@ -155,7 +160,7 @@ async function createVault() {
  ]
 
   portfolio.aboutMe.title.scrollIntoView()
-  portfolio.myWorks.works = (await (await fetch('/JSON/Projects.json')).json()).array //Replace with firebase soon
+  portfolio.myWorks.works = (await getJSON('/JSON/Projects.json')).array //Replace with firebase soon
 
   portfolio.myWorks.loadWorks()
 

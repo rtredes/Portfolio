@@ -1,87 +1,19 @@
 export class Portfolio {
-  constructor(parent) {
+  constructor(parent, {about, stacks, contact}) {
     this.parent = parent
     this.container = create.element('div', {
       'class': 'portfolio',
       'append': this.parent
     })
 
-    this.aboutMe = new AboutMe('about me', [
-      [
-        'My name is ',
-        {
-          'tag': 'strong',
-          'main': 'Reiniel',
-          'alt': 'Tredes'
-        },
-        ` , a ${calculateAge('10/01/98')} years old self-taught `,
-        {
-          'tag': 'strong',
-          'main': 'Web',
-          'alt': 'Full-stack'
-        },
-        ' Developer, from ',
-        {
-          'tag': 'strong',
-          'main': 'Philippines',
-          'alt': 'Dasmariñas, Cavite'
-        }
-      ],
-      [
-        'I am a 2nd year undergrad student of ',
-        {
-          'tag': 'b',
-          'innerHTML': `<i><q>Bachelor of Science in Information Technology</q></i>`
-        },
-        `, and I have to `,
-        { 'tag': 'b', 'innerText': 'stop' },
-        ` because of financial problem, but that's okay, because the last semester on my school is when I learnt the basics of `,
-        { 'tag': 'b', 'innerText': 'Html' },
-        ` , `,
-        { 'tag': 'b', 'innerText': 'Css' },
-        `, and `,
-        {
-          'tag': 'strong',
-          'main': "Js",
-          'alt': 'JavaScript'
-        }
-      ],
-      [
-        `For some reason I am only using pure `,
-        { 'tag': 'b', 'innerText': 'Html' },
-        ` , `,
-        { 'tag': 'b', 'innerText': 'Css' },
-        `, and `,
-        { 'tag': 'b', 'innerText': 'Js' },
-        ', I am avoiding the use of things that makes it easier like ',
-        { 'tag': 'b', 'innerText': 'Bootstrap' }, ', ',
-        { 'tag': 'b', 'innerText': 'JQuery' }, ', etc. ',
-        'I think easy and comfortable things will stop me from ',
-        {
-          'tag': 'strong',
-          'main': "Growing",
-          'alt': 'Learning'
-        }
-      ],
-      [
-        `I'm `,
-        { 'tag': 'b', 'innerText': 'Hardworking' },
-        ', ', { 'tag': 'b', 'innerText': 'Passionate' },
-        ', ', { 'tag': 'b', 'innerText': 'Fast learner' },
-        ', and ', { 'tag': 'b', 'innerText': 'Honest' },
-        `. I'm always willing to learn new things to expand my knowledge, and to achieve my dream of becoming a successful `, {
-          'tag': 'strong',
-          'main': "Developer",
-          'alt': 'Person'
-        },
-        ' someday.'
-      ]
-    ], this.container)
+    this.aboutMe = new AboutMe(
+      'about me', about, this.container
+    )
 
     this.stacks = new Stacks(
       `My current stack of 
       <strong main="Languages" alt="Technologies"></strong>`,
-      `HTML5 - CSS3 - JS - ES6 - NODEJS - FIREBASE - PHP - MYSQL`,
+      stacks,
       this.container
     )
 
@@ -92,27 +24,8 @@ export class Portfolio {
 
     this.contact = new Contact(
       'Contact Me',
-      'rtredes2@gmail.com',
-      [{
-          'icon': 'facebook',
-          'href': 'facebook.com/rtredes'
-      },
-        {
-          'icon': 'twitter',
-          'href': 'twitter.com/rtredes'
-      },
-        {
-          'icon': 'instagram',
-          'href': 'instagram.com/reiniel26'
-      },
-        {
-          'icon': 'github',
-          'href': 'github.com/rtredes'
-      },
-        {
-          'icon': 'steam',
-          'href': 'steamcommunity.com/id/rtredes'
-      }],
+      contact.email,
+      contact.links,
       this.container
     )
   }
@@ -380,13 +293,31 @@ function p(elements, parent) {
     'append': parent
   })
   elements.forEach(el => {
-    if (typeof el === 'object') {
+    /*if (typeof el === 'object') {
       var { tag } = el
       create.element(tag, {
         ...el,
         'append': paragraph
       })
-    } else create.textNode(el, paragraph)
+    } else */
+    paragraph.innerHTML += filterCode(el)
+    //create.textNode(filterCode(el), paragraph)
   })
+  
+  function filterCode(_p){
+  
+    const start = _p.indexOf('${')
+    
+    if(start != -1) {
+      const end = _p.indexOf('}')
+      const code_value = eval(_p.substring(start + 2,end))
+      return _p.replace(_p.substring(start, end + 1), code_value)
+    }
+    return _p
+  }
   return paragraph
+}
+
+function str(main, alt){
+  return `<strong main='${main}' alt='${alt}'></strong>`
 }

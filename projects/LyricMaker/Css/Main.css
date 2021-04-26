@@ -116,14 +116,35 @@
   width: 400px !important;
   height: 200px !important;
   max-width: 95vw !important;
-  color: var(--morning);
   box-sizing: border-box;
   outline: none;
   overflow: auto;
   font-size: 12px;
-  background: transparent;
-  border: 1px dotted var(--morning);
+  background: var(--bg, transparent);
+  color: var(--color, var(--morning));
+  border: 2px var(--style) var(--morning);
+  border-radius: 5px;
+  
 }
+.lyrics-progress {
+  --style: outset;
+  --bg: var(--morning);
+  --color: var(--land);
+}
+.lyrics-container textarea{
+  --style: inset;
+}
+
+.lyrics-container textarea::placeholder{
+  color: var(--morning) !important;
+  transition: 1s;
+  opacity: 1;
+  transform: translateY(calc(100px - 1rem));
+}
+.lyrics-container textarea:hover::placeholder{
+  opacity: 0;
+}
+
 .lyrics-progress > .last{
   opacity: 0.5;
 }
